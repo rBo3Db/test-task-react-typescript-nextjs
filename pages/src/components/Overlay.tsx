@@ -7,8 +7,6 @@ interface IOverlayProps {
 }
 
 export function Overlay(props: IOverlayProps) {
-    console.log("Overlay")
-    console.log(props.isShown)
     return (
         <EntireOverlayWrapper isShown={props.isShown}>{props.children}</EntireOverlayWrapper>
     )
@@ -29,6 +27,5 @@ const EntireOverlayWrapper = styled.div<WrapperProps>`
     display: ${props => props.isShown ? 'flex' : 'none'};
     align-items: center;
     justify-content: center;
-    z-index: 10`;
-
-    //${props => props.isShown ? 'flex' : 'none'}
+    z-index: 10
+`;

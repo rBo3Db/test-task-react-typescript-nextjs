@@ -8,14 +8,11 @@ function OperatorList(props: {operators: IOperator[]}) {
         <StyledOperatorList>
             {props.operators.map((operator) => <Operator key={operator.id} operator={operator}/>)} 
         </StyledOperatorList>
-        // <StyledOperatorList>
-        //     {props.operators.map((operator) => <Operator key={operator.id} operator={operator}/>)} 
-        // </StyledOperatorList>
     )
 }
 
 export default OperatorList
 
 const StyledOperatorList = styled.div`
-padding: 20px;
-`
+    padding: 20px;
+`;

@@ -18,6 +18,3 @@ export const Operator = (props: IOperatorProps) => {
             </Button>
     )
 }
-
-
-//${props.operator.name}

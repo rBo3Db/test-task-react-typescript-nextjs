@@ -7,7 +7,6 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import Router from 'next/router';
 import {GlobalStyle} from './src/theme/globalStyle';
-//props: {match: {params: {name: string}}}
 
 export default function PayPage() {
     React.useState();
@@ -16,18 +15,14 @@ export default function PayPage() {
     const [operator, setOperator] = useState('');
     const [isLoaderShow, setLoaderShow] = useState(false);
     const [apiStatus, setApiStatus] = useState('');
-    console.log(isLoaderShow);
     useEffect(() => {
-        // const { router: { query: { id } }} = this.props;
-        // const { name } = props.match.params;
         if (router.query.title) {
             const name = '' + router.query.title;
             setOperator(name); 
         } else {
             routerPushHome();
         }
-
-    },[])
+    },[]);
 
     const changeLoaderState = (newIsShownState: boolean) => {
         setLoaderShow(newIsShownState);
@@ -65,7 +60,7 @@ export default function PayPage() {
         );
     }
 
-    return(
+    return (
         <PayForm>
             <GlobalStyle />
             <Loader isShown = {isLoaderShow}/>
@@ -115,8 +110,8 @@ const PayForm = styled.div`
     align-content: center;
     flex-direction: column;
 
-`
+`;
 const Header = styled.h1`
     align-self: center;
     color: palevioletred;
-`
+`;

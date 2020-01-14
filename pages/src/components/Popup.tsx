@@ -1,19 +1,12 @@
 import React from 'react';
 import { Overlay } from "./Overlay";
 import { Button } from './Button';
-import Link from 'next/link';
 import styled from 'styled-components';
 
 interface IPopupProps {
     apiStatus: string,
-    resetPopupState:  (e: React.MouseEvent) => void,
+    resetPopupState:  (e: React.MouseEvent) => void
 }
-
-// const MyButton = React.forwardRef(({onClick}, ref) => (
-//     <div onClick={onClick} ref={ref}>
-//       ntrcn{/* <Button onClick={props.resetPopupStdivte}>To main page</Button> */}
-//     </a>
-// ))
 
 export function Popup(props: IPopupProps) {
     return ( 
@@ -32,7 +25,7 @@ export function Popup(props: IPopupProps) {
 
 const StatusText = styled.h2`
     color: white;
-`
+`;
 const PopupContent = styled.div`
     max-width: 400px;
     align-items: center;
@@ -43,4 +36,4 @@ const PopupContent = styled.div`
     @media (max-width: 414px) {
         align-self: flex-start;
     }
-`
+`;

@@ -15,13 +15,6 @@ export const Button = (props: IButtonProps) => {
     )
 }
 
-// interface AnyButtonProps {
-//     type?: "button" | "reset" | "submit" | undefined,
-//     onClick: (e: React.MouseEvent) => void,
-//     children: React.ReactNode,
-// }
-
-// Define our button, but with the use of props.theme this time
 const AnyButton = styled.button`
     display: block;
     color: white;
