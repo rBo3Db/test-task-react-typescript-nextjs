@@ -36,4 +36,4 @@ const PopupContent = styled.div`
     @media (max-width: 414px) {
         align-self: flex-start;
     }
-`;
+`; 
