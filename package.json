@@ -10,8 +10,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out",
+    "export": "next export"
   },
   "resolutions": {
     "@types/react": "...",
