@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from './Button';
+import Button from './Button';
 import Router from 'next/router';
 
 interface IOperatorProps {
@@ -8,13 +8,14 @@ interface IOperatorProps {
     }
 }
 
-export const Operator = (props: IOperatorProps) => {
+const Operator = (props: IOperatorProps) => {
     const onClick = (e: React.MouseEvent) => {
-    Router.push(`/payPage?title=${props.operator.name}`);
+    Router.push(`/payPage?title=${props.operator?.name}`);
 }
     return (
             <Button onClick={onClick}>
-                {props.operator.name}
+                {props.operator?.name}
             </Button>
     )
 }
+export default Operator;

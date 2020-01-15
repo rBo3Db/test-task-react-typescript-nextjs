@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import {Overlay} from "./Overlay"
+import Overlay from "./Overlay"
 
 const rotate = keyframes`
     from {
@@ -23,7 +23,7 @@ interface ILoaderProps {
     isShown: boolean
 }
 
-export function Loader(props: ILoaderProps) {
+export default function Loader(props: ILoaderProps) {
     return (
         <Overlay isShown={props.isShown}>
             <Rotate>Loading...</Rotate>

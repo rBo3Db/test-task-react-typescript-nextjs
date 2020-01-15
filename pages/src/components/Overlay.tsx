@@ -6,7 +6,7 @@ interface IOverlayProps {
     children: ReactElement
 }
 
-export function Overlay(props: IOverlayProps) {
+export default function Overlay(props: IOverlayProps) {
     return (
         <EntireOverlayWrapper isShown={props.isShown}>{props.children}</EntireOverlayWrapper>
     )
