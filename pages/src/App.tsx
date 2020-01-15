@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import OperatorList from './components/OperatorList';
-import {GlobalStyle} from './theme/globalStyle';
+import GlobalStyle from './theme/globalStyle';
 import operators from '../operators.json';
 
-export function App() {
+export default function App() {
   return (
     
     <AppWrapper>

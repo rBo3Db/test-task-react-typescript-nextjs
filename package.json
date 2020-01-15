@@ -2,17 +2,26 @@
   "name": "next.js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://rbo3db.github.io/test-task-react-typescript-nextjs/",
+  "private": true,
+  "main": "./pages/index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "resolutions": {
+    "@types/react": "...",
+    "@types/react-dom": "..."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^2.2.0",
     "next": "^9.1.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

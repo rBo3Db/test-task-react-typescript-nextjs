@@ -1,6 +1,6 @@
 import React from 'react';
-import { Overlay } from "./Overlay";
-import { Button } from './Button';
+import Overlay from "./Overlay";
+import Button from './Button';
 import styled from 'styled-components';
 
 interface IPopupProps {
@@ -8,7 +8,7 @@ interface IPopupProps {
     resetPopupState:  (e: React.MouseEvent) => void
 }
 
-export function Popup(props: IPopupProps) {
+export default function Popup(props: IPopupProps) {
     return ( 
         <Overlay isShown={!!props.apiStatus}>
             <PopupContent>

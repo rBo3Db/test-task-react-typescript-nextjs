@@ -7,13 +7,14 @@ interface IButtonProps {
     type?: "button" | "reset" | "submit" | undefined
 }
 
-export const Button = (props: IButtonProps) => {
+const Button = (props: IButtonProps) => {
     return (
         <AnyButton onClick={props.onClick} {...props}>
            {props.children}
         </AnyButton>
     )
 }
+export default Button;
 
 const AnyButton = styled.button`
     display: block;
