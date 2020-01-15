@@ -5,14 +5,15 @@ import GlobalStyle from './theme/globalStyle';
 import operators from '../operators.json';
 
 export default function App() {
-  return (
-    
-    <AppWrapper>
-      <GlobalStyle />
-      <OperatorList operators={operators} />
-    </AppWrapper>
-    
-  );
+  
+    return (
+      
+      <AppWrapper>
+        <GlobalStyle />
+        <OperatorList operators={operators} />
+      </AppWrapper>
+      
+    );
 }
 
 const AppWrapper = styled.div`

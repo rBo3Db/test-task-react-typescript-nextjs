@@ -10,11 +10,11 @@ interface IOperatorProps {
 
 const Operator = (props: IOperatorProps) => {
     const onClick = (e: React.MouseEvent) => {
-    Router.push(`/payPage?title=${props.operator.name}`);
+    Router.push(`/payPage?title=${props.operator?.name}`);
 }
     return (
             <Button onClick={onClick}>
-                {props.operator.name}
+                {props.operator?.name}
             </Button>
     )
 }
