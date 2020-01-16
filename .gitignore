@@ -5,6 +5,7 @@
 /.next
 /.git
 /.vscode
+/out
 /.pnp
 .pnp.js
 
