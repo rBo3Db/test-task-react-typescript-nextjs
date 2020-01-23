@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
-import Loader from './src/components/Loader';
-import Popup from './src/components/Popup';
-import Button from './src/components/Button';
+import Loader from '../src/components/Loader';
+import Popup from '../src/components/Popup';
+import Button from '../src/components/Button';
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import Router from 'next/router';
-import GlobalStyle from './src/theme/globalStyle';
+import GlobalStyle from '../src/theme/globalStyle';
 
 export default function PayPage() {
     React.useState();
