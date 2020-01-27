@@ -5,24 +5,22 @@ import Popup from '../src/components/Popup';
 import Button from '../src/components/Button';
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
-import Router from 'next/router';
 import GlobalStyle from '../src/theme/globalStyle';
 
 export default function PayPage() {
     React.useState();
     const router = useRouter();
 
-    const [operator, setOperator] = useState('');
     const [isLoaderShow, setLoaderShow] = useState(false);
     const [apiStatus, setApiStatus] = useState('');
+
+    const queryTitle = router.query.title;
+    
     useEffect(() => {
-        if (router.query.title) {
-            const name = '' + router.query.title;
-            setOperator(name); 
-        } else {
+        if (!queryTitle) {
             routerPushHome();
         }
-    },[]);
+    },[queryTitle]);
 
     const changeLoaderState = (newIsShownState: boolean) => {
         setLoaderShow(newIsShownState);
@@ -36,7 +34,7 @@ export default function PayPage() {
     }
 
     const routerPushHome = () => {
-        Router.push('/');
+        router.push('/');
     }
 
     const handleSubmit = (event: any) => {
@@ -69,7 +67,7 @@ export default function PayPage() {
                 resetPopupState={resetPopupState}    
             />
             <Header>
-                Pay for {operator} 
+                Pay for {queryTitle} 
             </Header>
             <form onSubmit={handleSubmit}>
                 <p>Please enter phone number</p>

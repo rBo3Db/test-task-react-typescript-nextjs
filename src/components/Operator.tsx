@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Router from 'next/router';
+// import { useRouter } from 'next/router';
 
 interface IOperatorProps {
     operator: {
@@ -10,7 +11,11 @@ interface IOperatorProps {
 
 const Operator = (props: IOperatorProps) => {
     const onClick = (e: React.MouseEvent) => {
-    Router.push(`/payPage?title=${props.operator?.name}`);
+    Router.push({
+        pathname: '/payPage',
+        query: {title: props.operator?.name}},
+            `/payPage?title=${props.operator?.name} `
+        );
 }
     return (
             <Button onClick={onClick}>

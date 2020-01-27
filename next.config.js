@@ -5,14 +5,19 @@
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
+  target: 'serverless',
   exportPathMap: function () {
     return {
       "/": { page: "/" },
-      "/payPage": { page: "/payPage" },
+      "/payPage": { page: "/payPage", query: {title:"MTS"}},
+      "/payPage": { page: "/payPage", query: {title:"MEGAFON"}},
+      "/payPage": { page: "/payPage", query: {title:"Beeline"}},
+      "/payPage": { page: "/payPage", query: {title:"Tele2"}}
+
     }
   },
   //assetPrefix: '',
-  assetPrefix: !debug ? '/test-task-react-typescript-nextjs/' : '',
+  assetPrefix: !debug ? 'https://rbo3db.github.io/test-task-react-typescript-nextjs/' : '',
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     // console.log('webpack');
